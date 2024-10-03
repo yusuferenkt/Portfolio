@@ -17,6 +17,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Portfolyo</title>
   </head>
@@ -108,8 +112,30 @@
         <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
           <div class="col">
             <div class="card mb-3 shadow">
-              <img src="img/ladies.png" class="card-img-top" alt="" />
               <div class="card-body">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/ladies.png" class="card-img-top" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <video
+                        class="card-img-top"
+                        width="300px"
+                        height="100px"
+                        controls
+                      >
+                        <source
+                          src="img/videoplayback.mp4"
+                          class="card-img-top"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
                 <h5 class="card-title">LADIES Web Sitesi</h5>
                 <p class="card-text">
                   Bu projede ekip arkadaşımla birlikte, modern web teknolojileri
@@ -134,8 +160,34 @@
           </div>
           <div class="col">
             <div class="card mb-3 shadow">
-              <img src="img/catchtheturtle.png" class="card-img-top" alt="" />
               <div class="card-body">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="img/catchtheturtle.png"
+                        class="card-img-top"
+                        alt=""
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <video
+                        class="card-img-top"
+                        width="300px"
+                        height="100px"
+                        controls
+                      >
+                        <source
+                          src="img/catchtheturtlevideo.mp4"
+                          class="card-img-top"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
                 <h5 class="card-title">Catch The Turtle</h5>
                 <p class="card-text">
                   CatchTheTurtle, PyCharm ve Turtle Graphics kullanarak
@@ -170,5 +222,15 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
